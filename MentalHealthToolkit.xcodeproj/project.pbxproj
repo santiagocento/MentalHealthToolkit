@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		2F81BFD72D7CC78E00881DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F81BFBE2D7CC78C00881DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F81BFC52D7CC78C00881DAF;
+			remoteInfo = MentalHealthToolkit;
+		};
+		2F81BFE12D7CC78E00881DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F81BFBE2D7CC78C00881DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F81BFC52D7CC78C00881DAF;
+			remoteInfo = MentalHealthToolkit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F81BFC62D7CC78C00881DAF /* MentalHealthToolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalHealthToolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F81BFD62D7CC78E00881DAF /* MentalHealthToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalHealthToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F81BFE02D7CC78E00881DAF /* MentalHealthToolkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalHealthToolkitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2F81BFC82D7CC78C00881DAF /* MentalHealthToolkit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MentalHealthToolkit;
+			sourceTree = "<group>";
+		};
+		2F81BFD92D7CC78E00881DAF /* MentalHealthToolkitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MentalHealthToolkitTests;
+			sourceTree = "<group>";
+		};
+		2F81BFE32D7CC78E00881DAF /* MentalHealthToolkitUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MentalHealthToolkitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F81BFC32D7CC78C00881DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFD32D7CC78E00881DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFDD2D7CC78E00881DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F81BFBD2D7CC78C00881DAF = {
+			isa = PBXGroup;
+			children = (
+				2F81BFC82D7CC78C00881DAF /* MentalHealthToolkit */,
+				2F81BFD92D7CC78E00881DAF /* MentalHealthToolkitTests */,
+				2F81BFE32D7CC78E00881DAF /* MentalHealthToolkitUITests */,
+				2F81BFC72D7CC78C00881DAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F81BFC72D7CC78C00881DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F81BFC62D7CC78C00881DAF /* MentalHealthToolkit.app */,
+				2F81BFD62D7CC78E00881DAF /* MentalHealthToolkitTests.xctest */,
+				2F81BFE02D7CC78E00881DAF /* MentalHealthToolkitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F81BFC52D7CC78C00881DAF /* MentalHealthToolkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F81BFEA2D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkit" */;
+			buildPhases = (
+				2F81BFC22D7CC78C00881DAF /* Sources */,
+				2F81BFC32D7CC78C00881DAF /* Frameworks */,
+				2F81BFC42D7CC78C00881DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2F81BFC82D7CC78C00881DAF /* MentalHealthToolkit */,
+			);
+			name = MentalHealthToolkit;
+			packageProductDependencies = (
+			);
+			productName = MentalHealthToolkit;
+			productReference = 2F81BFC62D7CC78C00881DAF /* MentalHealthToolkit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F81BFD52D7CC78E00881DAF /* MentalHealthToolkitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F81BFED2D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkitTests" */;
+			buildPhases = (
+				2F81BFD22D7CC78E00881DAF /* Sources */,
+				2F81BFD32D7CC78E00881DAF /* Frameworks */,
+				2F81BFD42D7CC78E00881DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F81BFD82D7CC78E00881DAF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2F81BFD92D7CC78E00881DAF /* MentalHealthToolkitTests */,
+			);
+			name = MentalHealthToolkitTests;
+			packageProductDependencies = (
+			);
+			productName = MentalHealthToolkitTests;
+			productReference = 2F81BFD62D7CC78E00881DAF /* MentalHealthToolkitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F81BFDF2D7CC78E00881DAF /* MentalHealthToolkitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F81BFF02D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkitUITests" */;
+			buildPhases = (
+				2F81BFDC2D7CC78E00881DAF /* Sources */,
+				2F81BFDD2D7CC78E00881DAF /* Frameworks */,
+				2F81BFDE2D7CC78E00881DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F81BFE22D7CC78E00881DAF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2F81BFE32D7CC78E00881DAF /* MentalHealthToolkitUITests */,
+			);
+			name = MentalHealthToolkitUITests;
+			packageProductDependencies = (
+			);
+			productName = MentalHealthToolkitUITests;
+			productReference = 2F81BFE02D7CC78E00881DAF /* MentalHealthToolkitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F81BFBE2D7CC78C00881DAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					2F81BFC52D7CC78C00881DAF = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					2F81BFD52D7CC78E00881DAF = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 2F81BFC52D7CC78C00881DAF;
+					};
+					2F81BFDF2D7CC78E00881DAF = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 2F81BFC52D7CC78C00881DAF;
+					};
+				};
+			};
+			buildConfigurationList = 2F81BFC12D7CC78C00881DAF /* Build configuration list for PBXProject "MentalHealthToolkit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F81BFBD2D7CC78C00881DAF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2F81BFC72D7CC78C00881DAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F81BFC52D7CC78C00881DAF /* MentalHealthToolkit */,
+				2F81BFD52D7CC78E00881DAF /* MentalHealthToolkitTests */,
+				2F81BFDF2D7CC78E00881DAF /* MentalHealthToolkitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F81BFC42D7CC78C00881DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFD42D7CC78E00881DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFDE2D7CC78E00881DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F81BFC22D7CC78C00881DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFD22D7CC78E00881DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F81BFDC2D7CC78E00881DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F81BFD82D7CC78E00881DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F81BFC52D7CC78C00881DAF /* MentalHealthToolkit */;
+			targetProxy = 2F81BFD72D7CC78E00881DAF /* PBXContainerItemProxy */;
+		};
+		2F81BFE22D7CC78E00881DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F81BFC52D7CC78C00881DAF /* MentalHealthToolkit */;
+			targetProxy = 2F81BFE12D7CC78E00881DAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F81BFE82D7CC78E00881DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F81BFE92D7CC78E00881DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F81BFEB2D7CC78E00881DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MentalHealthToolkit/Preview Content\"";
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F81BFEC2D7CC78E00881DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MentalHealthToolkit/Preview Content\"";
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F81BFEE2D7CC78E00881DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentalHealthToolkit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MentalHealthToolkit";
+			};
+			name = Debug;
+		};
+		2F81BFEF2D7CC78E00881DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentalHealthToolkit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MentalHealthToolkit";
+			};
+			name = Release;
+		};
+		2F81BFF12D7CC78E00881DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MentalHealthToolkit;
+			};
+			name = Debug;
+		};
+		2F81BFF22D7CC78E00881DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C6KH73DUUM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cento.santiago.MentalHealthToolkitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MentalHealthToolkit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F81BFC12D7CC78C00881DAF /* Build configuration list for PBXProject "MentalHealthToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F81BFE82D7CC78E00881DAF /* Debug */,
+				2F81BFE92D7CC78E00881DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F81BFEA2D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F81BFEB2D7CC78E00881DAF /* Debug */,
+				2F81BFEC2D7CC78E00881DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F81BFED2D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F81BFEE2D7CC78E00881DAF /* Debug */,
+				2F81BFEF2D7CC78E00881DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F81BFF02D7CC78E00881DAF /* Build configuration list for PBXNativeTarget "MentalHealthToolkitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F81BFF12D7CC78E00881DAF /* Debug */,
+				2F81BFF22D7CC78E00881DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F81BFBE2D7CC78C00881DAF /* Project object */;
+}
