@@ -1,0 +1,75 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mental Health Toolkit"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recursos de Salud Mental"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "MentalHealthToolkit"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MentalHealthToolkit"
+          }
+        }
+      }
+    },
+    "NSHealthShareUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mental Health Toolkit needs access to this information to be able to best analyze your routines"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recursos de Salud Mental necesita acceso a esta información para poder analizar mejor tu rutina"
+          }
+        }
+      }
+    },
+    "NSHealthUpdateUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mental Health Toolkit needs access to this information to be able to best analyze your routines"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recursos de Salud Mental necesita acceso a esta información para poder analizar mejor tu rutina"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
