@@ -29,7 +29,6 @@ extension View {
                 RoundedRectangle(cornerRadius: radius)
                     .stroke(color ?? theme.colorNeutralBorderDefault)
             }
-            .padding()
     }
 }
 

@@ -44,8 +44,6 @@ struct HealthKitConfigurations {
     func requestAuthorization() async -> Bool {
         let result = await withCheckedContinuation({ continuation in
             healthStore.requestAuthorization(toShare: allCategoriesTypes, read: allCategoriesTypes) { (result, error) in
-                debugPrint("Authorization granted: \(result)")
-                debugPrint("Authorization error: \(error?.localizedDescription ?? "no error")")
                 continuation.resume(returning: result)
             }
         })

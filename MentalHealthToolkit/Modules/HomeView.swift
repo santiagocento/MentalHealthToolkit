@@ -36,21 +36,22 @@ struct HomeView: View {
             }
             
             Divider()
-            
+               
             if healthStoreStatus == .hasDataAccess {
                 VStack(alignment: .leading) {
                     Text(LocalizableKey.lastMindfulSession)
-                        .typography(.title_s_highcontrast)
-                        .padding(.bottom)
+                        .typography(.body_m_highcontrast)
+                        .foregroundStyle(theme.colorNeutralTextStrong)
+                        .padding(.bottom, 4)
                     Text(lastMindfulSession)
-                        .onAppear {
-                            Task {
-                                lastMindfulSession = await viewModel.getLastMindfulSession()
-                            }
-                        }
+                        .foregroundStyle(theme.colorNeutralTextWeak)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .roundedBorder()
+                .padding(.top, 12)
+                .task {
+                    lastMindfulSession = await viewModel.getLastMindfulSession()
+                }
             }
             Spacer()
         }

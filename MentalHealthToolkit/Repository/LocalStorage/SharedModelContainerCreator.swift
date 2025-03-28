@@ -10,7 +10,7 @@ import SwiftData
 struct SharedModelContainerCreator {
     
     static func create() -> ModelContainer {
-        let schema = Schema([HealthyDay.self, HealthStore.self])
+        let schema = Schema([HealthyDay.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])

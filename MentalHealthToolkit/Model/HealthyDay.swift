@@ -11,36 +11,27 @@ import SwiftData
 @Model
 class HealthyDay: ObservableObject, Codable {
     var date: Date = Calendar.current.startOfDay(for: .now)
-    @Relationship
-    var mentalHealth: MentalHealth = MentalHealth()
+    var lastDepressionScore: Int?
     
     init(date: Date = Calendar.current.startOfDay(for: .now),
-         mentalHealth: MentalHealth = MentalHealth()) {
+         lastDepressionScore: Int? = nil) {
         self.date = date
-        self.mentalHealth = mentalHealth
+        self.lastDepressionScore = lastDepressionScore
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         date = try container.decode(Date.self, forKey: .date)
-        mentalHealth = try container.decode(MentalHealth.self, forKey: .mentalHealth)
+        lastDepressionScore = try container.decode(Int.self, forKey: .lastDepressionScore)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(date, forKey: .date)
-        try container.encode(mentalHealth, forKey: .mentalHealth)
+        try container.encode(lastDepressionScore, forKey: .lastDepressionScore)
     }
     
     private enum CodingKeys: String, CodingKey {
-        case date, mentalHealth
-    }
-}
-
-class HealthyDaysRecords: ObservableObject {
-    @Published var days: [HealthyDay]
-    
-    init(days: [HealthyDay]) {
-        self.days = days
+        case date, lastDepressionScore
     }
 }

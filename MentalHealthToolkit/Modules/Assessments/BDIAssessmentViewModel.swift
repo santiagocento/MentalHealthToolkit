@@ -18,7 +18,7 @@ class BDIAssessmentViewModel: ObservableObject {
         let score = assessment.questions.reduce(0) { partialResult, question in
             partialResult + (question.options.first { $0.selected }?.points ?? 0)
         }
-        assessment.healthyDay.mentalHealth.lastDepressionScore = score
+        assessment.healthyDay.lastDepressionScore = score
         return score
     }
 }

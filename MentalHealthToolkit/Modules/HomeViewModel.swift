@@ -15,7 +15,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func getLastDepressionAssessment() -> String {
-        guard let score = model.mentalHealth.lastDepressionScore else {
+        guard let score = model.lastDepressionScore else {
             return LocalizableKey.noPointsRegistered.toString()
         }
         return "\(LocalizableKey.bdi2points.toString())\(score)"

@@ -22,6 +22,8 @@ struct ContentView: View {
                     .environment(\.healthStoreStatus, viewModel.status)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(theme.colorNeutralBgWeak)
         .task {
             await viewModel.setup()
         }
