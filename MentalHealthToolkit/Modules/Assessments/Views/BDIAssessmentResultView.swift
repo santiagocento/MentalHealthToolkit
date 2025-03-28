@@ -14,16 +14,14 @@ struct BDIAssessmentResultView: View {
         VStack {
             HStack {
                 Text(LocalizableKey.result)
-                    .font(.title)
-                .fontWeight(.black)
+                    .typography(.title_xxl_highcontrast)
                 Spacer()
             }
             .padding()
             
             HStack {
-                Text("\(LocalizableKey.bdi2points) \(viewModel.finalScore())")
-                    .font(.title)
-                .fontWeight(.semibold)
+                Text("\(LocalizableKey.bdi2points.toString())\(viewModel.finalScore())")
+                    .typography(.title_l_lowcontrast)
                 Spacer()
             }
             .padding()

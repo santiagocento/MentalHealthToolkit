@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class HealthyDay: ObservableObject {
+class HealthyDay: ObservableObject, Codable {
     var date: Date = Calendar.current.startOfDay(for: .now)
     @Relationship
     var mentalHealth: MentalHealth = MentalHealth()
@@ -20,8 +20,20 @@ class HealthyDay: ObservableObject {
         self.mentalHealth = mentalHealth
     }
     
-    func getMentalProgress() -> Float {
-        return mentalHealth.worldInteraction ? 1 : 0
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        date = try container.decode(Date.self, forKey: .date)
+        mentalHealth = try container.decode(MentalHealth.self, forKey: .mentalHealth)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(date, forKey: .date)
+        try container.encode(mentalHealth, forKey: .mentalHealth)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case date, mentalHealth
     }
 }
 

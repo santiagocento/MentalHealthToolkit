@@ -8,48 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var pathStore: PathStore = PathStore()
+    @CTLTheme var theme
+    
+    @StateObject private var viewModel: ContentViewModel = ContentViewModel()
     
     var body: some View {
-        NavigationStack(path: $pathStore.path) {
-            MentalHealthView(viewModel: MentalHealthViewModel(model: HealthyDay()))
-                .navigationDestination(for: BDIAssessment.self) { assessment in BDIAssessmentUIView(viewModel: BDIAssessmentViewModel(assessment: assessment)) }
-                .environmentObject(pathStore)
-               
+        VStack {
+            if viewModel.status == .loading {
+                ProgressView()
+                    .tint(theme.colorPrimaryIcStrong)
+            } else {
+                HomeView(viewModel: HomeViewModel(model: HealthyDay()))
+                    .environment(\.healthStoreStatus, viewModel.status)
+            }
+        }
+        .task {
+            await viewModel.setup()
+        }
+        .alert(LocalizableKey.resolvePermissions, isPresented: $viewModel.showSettingsAlert) {
+            Button(LocalizableKey.accept, role: .cancel) {}
+        } message: {
+            Text(LocalizableKey.howToChangeHealthSettings)
         }
     }
 }
 
 #Preview {
     ContentView()
-}
-
-class PathStore: ObservableObject {
-    @Published var path = NavigationPath() {
-        didSet {
-            save()
-        }
-    }
-    
-    private let savePath = URL.documentsDirectory.appending(path: "SavedPathStore")
-    
-    init() {
-        if let data = try? Data(contentsOf: savePath) {
-            if let decoded = try? JSONDecoder().decode(NavigationPath.CodableRepresentation.self, from: data) {
-                path = NavigationPath(decoded)
-                return
-            }
-        }
-    }
-    
-    func save() {
-        guard let representation = path.codable else { return }
-        
-        do {
-            let data = try JSONEncoder().encode(representation)
-            try data.write(to: savePath)
-        } catch {
-            print("Failed to save navigation data")
-        }
-    }
 }
