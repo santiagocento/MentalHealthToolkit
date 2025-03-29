@@ -8,4 +8,5 @@
 enum HealthKitError: Error {
     case dataNotAvailable
     case typeNotAvailable
+    case dateCreationFailed
 }

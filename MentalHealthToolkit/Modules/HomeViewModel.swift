@@ -33,4 +33,8 @@ class HomeViewModel: ObservableObject {
             return LocalizableKey.couldntObtainInformation.toString()
         }
     }
+    
+    func getSleepData() async -> [SleepData.Series] {
+        return await HealthKitRepository().fetchLastSleepData()
+    }
 }

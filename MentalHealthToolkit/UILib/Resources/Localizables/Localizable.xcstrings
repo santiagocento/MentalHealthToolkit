@@ -11,6 +11,16 @@
         }
       }
     },
+    "%lld hs. %lld min. de sueño" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld hs. %2$lld min. de sueño"
+          }
+        }
+      }
+    },
     "accept" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -78,6 +88,12 @@
           }
         }
       }
+    },
+    "Data Category" : {
+
+    },
+    "Data Size" : {
+
     },
     "finish" : {
       "extractionState" : "manual",
@@ -314,6 +330,9 @@
           }
         }
       }
+    },
+    "Última noche" : {
+
     }
   },
   "version" : "1.0"

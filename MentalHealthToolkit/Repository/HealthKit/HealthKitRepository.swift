@@ -36,57 +36,70 @@ struct HealthKitRepository {
         }
     }
     
-    func fetchLastSleepData() async throws -> HKCategorySample? {
-        guard let  sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
-            throw HealthKitError.typeNotAvailable
+    func fetchLastSleepData() async -> [SleepData.Series] {
+        guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
+            return []
         }
         
         let calendar = Calendar.current
         let now = Date()
-
-        let startOfPreviousNight = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: now.addingTimeInterval(-86400))!
-        let endOfPreviousNight = calendar.date(bySettingHour: 10, minute: 0, second: 0, of: now)!
-
-        let predicate = HKQuery.predicateForSamples(withStart: startOfPreviousNight, end: endOfPreviousNight, options: .strictStartDate)
-        let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
-            guard let samples = samples as? [HKCategorySample] else {
-                // Handle no data available
-                return
-            }
-
-            let filteredSamples = samples.filter { sample in
-                let source = sample.sourceRevision.source.bundleIdentifier
-                return source.starts(with: "com.apple.health")
-            }
-
-            var remSleepSeconds: TimeInterval = 0
-            var deepSleepSeconds: TimeInterval = 0
-            var coreSleepSeconds: TimeInterval = 0
-            var awakeningsCount = 0
-            var totalSleepSeconds: TimeInterval = 0
-
-            for sample in filteredSamples {
-                let value = sample.value
-                let duration = sample.endDate.timeIntervalSince(sample.startDate)
-
-                switch value {
-                case HKCategoryValueSleepAnalysis.asleepREM.rawValue:
-                    remSleepSeconds += duration
-                case HKCategoryValueSleepAnalysis.asleepCore.rawValue:
-                    coreSleepSeconds += duration
-                case HKCategoryValueSleepAnalysis.asleepDeep.rawValue:
-                    deepSleepSeconds += duration
-                case HKCategoryValueSleepAnalysis.awake.rawValue:
-                    awakeningsCount += 1
-                default:
-                    break
-                }
-            }
-
-            totalSleepSeconds = deepSleepSeconds + coreSleepSeconds + remSleepSeconds
+        
+        guard let startOfPreviousNight = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: now.addingTimeInterval(-86400)),
+              let endOfPreviousNight = calendar.date(bySettingHour: 10, minute: 0, second: 0, of: now) else {
+            return []
         }
-
-        healthStore.execute(query)
-        return nil
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startOfPreviousNight, end: endOfPreviousNight, options: .strictStartDate)
+        do {
+            let sleepData: [SleepData.Series] = try await withCheckedThrowingContinuation { continuation in
+                let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
+                    
+                    if let error = error {
+                        debugPrint(error)
+                        continuation.resume(throwing: error)
+                        return
+                    }
+                    
+                    guard let samples = samples as? [HKCategorySample] else {
+                        continuation.resume(returning: [])
+                        return
+                    }
+                    
+                    let filteredSamples = samples.filter { sample in
+                        let source = sample.sourceRevision.source.bundleIdentifier
+                        return source.starts(with: "com.apple.health")
+                    }
+                    
+                    var remSleepSeconds: TimeInterval = 0
+                    var deepSleepSeconds: TimeInterval = 0
+                    var coreSleepSeconds: TimeInterval = 0
+                    
+                    for sample in filteredSamples {
+                        let value = sample.value
+                        let duration = sample.endDate.timeIntervalSince(sample.startDate)
+                        
+                        switch value {
+                        case HKCategoryValueSleepAnalysis.asleepREM.rawValue:
+                            remSleepSeconds += duration
+                        case HKCategoryValueSleepAnalysis.asleepCore.rawValue:
+                            coreSleepSeconds += duration
+                        case HKCategoryValueSleepAnalysis.asleepDeep.rawValue:
+                            deepSleepSeconds += duration
+                        default:
+                            break
+                        }
+                    }
+                    continuation.resume(returning: [
+                        SleepData.Series(category: "Profundo", seconds: Int(deepSleepSeconds)),
+                        SleepData.Series(category: "Ligero", seconds: Int(coreSleepSeconds)),
+                        SleepData.Series(category: "REM", seconds: Int(remSleepSeconds))
+                    ])
+                }
+                healthStore.execute(query)
+            }
+            return sleepData
+        } catch {
+            return []
+        }
     }
 }

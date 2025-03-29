@@ -15,7 +15,8 @@ struct HealthKitConfigurations {
         HKObjectType.workoutType(),
         HKQuantityType.workoutType(),
         HKQuantityType(.activeEnergyBurned),
-        HKObjectType.quantityType(forIdentifier: .stepCount)!
+        HKObjectType.quantityType(forIdentifier: .stepCount)!,
+        HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
     ]
     
     func getBiologicalSex() -> HKBiologicalSex {
