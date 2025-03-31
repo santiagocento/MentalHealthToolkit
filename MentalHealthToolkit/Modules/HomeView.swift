@@ -8,6 +8,7 @@
 import SwiftUI
 import HealthKit
 import HealthKitUI
+import FamilyControls
 
 struct HomeView: View {
     @EnvironmentObject var pathStore: NavigationPathStore
@@ -28,6 +29,15 @@ struct HomeView: View {
                     SleepChartView(data: sleepData)
                 }
                 lastMindfullSessionView()
+                ScreenTimeLastMonthChartView()
+                    .task {
+                        let center = AuthorizationCenter.shared
+                        do {
+                            try await center.requestAuthorization(for: .individual)
+                        } catch let error {
+                            debugPrint(error)
+                        }
+                    }
             }
             Spacer()
         }

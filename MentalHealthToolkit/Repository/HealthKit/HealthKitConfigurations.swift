@@ -12,11 +12,13 @@ struct HealthKitConfigurations {
     
     let allCategoriesTypes: Set = [
         HKCategoryType(.mindfulSession),
+        HKCategoryType(.sleepAnalysis),
         HKObjectType.workoutType(),
+        HKObjectType.stateOfMindType(),
         HKQuantityType.workoutType(),
         HKQuantityType(.activeEnergyBurned),
-        HKObjectType.quantityType(forIdentifier: .stepCount)!,
-        HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!
+        HKQuantityType(.basalEnergyBurned),
+        HKQuantityType(.stepCount),
     ]
     
     func getBiologicalSex() -> HKBiologicalSex {
